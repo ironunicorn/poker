@@ -3,13 +3,19 @@ require 'card'
 describe Card do
   let(:some_card) { Card.new("Q", :hearts) }
 
+  describe  "#value" do
+  end
+
+  describe "#suit" do
+  end
+
   describe "#initialize" do
     it 'initializes with a value' do
-      expect(card.value).to eq("Q")
+      expect(some_card.value).to eq("Q")
     end
 
     it 'initializes with a suit' do
-      expect(card.suit).to eq(:hearts)
+      expect(some_card.suit).to eq(:hearts)
     end
 
     context "when given bad a value" do
@@ -31,7 +37,7 @@ describe Card do
 
   describe '#to_s' do
     it "interpolates the value of the suit" do
-      expect(card.to_s).to eq("Q ♥".colorize(:red))
+      expect(some_card.to_s).to eq("Q ♥")
     end
   end
 end

@@ -42,14 +42,10 @@ describe Hand do
     end
   end
 
-  describe '#evaluate_hand' do
+  describe '::compare_hands' do
+    it "places a royal flush before a straight" do
 
-    it "evaluates a royal flush"
-    it "evaluates a flush"
-    it "evaluates a full house"
-    it "evaluates a highest card hand"
-    it "throws an error if cards less than five"
-
+    end
   end
 
   describe '#discard' do
@@ -73,11 +69,9 @@ describe Hand do
     end
 
     it "eliminates the specified cards" do
-      full_hand.discard([1,2,4])
       expected = [some_cards[0], some_cards[3]]
+      full_hand.discard([1,2,4])
       expect(full_hand.cards).to eq(expected)
     end
   end
-
-
 end
