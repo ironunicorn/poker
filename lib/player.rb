@@ -52,6 +52,7 @@ class Player
     print "Your hand: "
     @hand.display
     puts "which cards would you like to discard?"
-    gets.chomp.split(",").map(&:to_i)
+    answer = gets.chomp.split(",").map(&:to_i)
+    @hand.discard(answer)
   end
 end

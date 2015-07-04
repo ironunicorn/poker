@@ -1,6 +1,29 @@
 class Hand
   attr_accessor :cards
 
+  def self.return_winner(*hands)
+    hands.sort.first
+  end
+
+  def <=>(other)
+    #defines royal flushes
+
+
+  end
+
+  def flush?
+    test_suit = cards.first.suit
+    cards.all? { |card| card.suit == test_suit }
+  end
+
+  def straight
+    cards.sort!
+    i = 0
+    while
+  end
+
+
+
   def initialize
     @cards = []
   end

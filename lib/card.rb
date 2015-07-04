@@ -27,4 +27,8 @@ class Card
     "#{value} #{SUITS[suit]}"
   end
 
+  def <=>(other_card)
+    VALUES.index(@value) <=> VALUES.index(other_card.value)
+  end
+
 end
