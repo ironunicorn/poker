@@ -10,6 +10,10 @@ class Hand
     cards << additional_card
   end
 
+  def display
+    @cards.each { |card| print card, " " }
+  end
+
   def discard(array)
     raise "Which cards again?" if array.any? { |index| !index.between?(0, 4) }
     raise "Too many arguments" if array.length > 5

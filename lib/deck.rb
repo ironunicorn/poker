@@ -13,7 +13,8 @@ class Deck
   end
 
   def give_card
-    cards.shift
+    card = cards.shift
+    raise "You should stop gambling now." if card.nil?
   end
 
   def receive_card(card)

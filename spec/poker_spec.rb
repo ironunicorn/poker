@@ -2,6 +2,7 @@ require 'poker'
 
 describe PokerGame do
   let(:new_game) { PokerGame.new }
+  
   describe "#initialize" do
     it "defaults to two players" do
       expect(new_game.players.length).to eq(2)
